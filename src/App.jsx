@@ -3,6 +3,9 @@ import Header from "./components/Header";
 import Profile from "./components/Profile";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import ContactForm from "./components/ContactForm";
+import FeedbackWall from "./components/FeedbackWall";
 import Footer from "./components/Footer";
 import { useState } from "react";
 
@@ -29,6 +32,9 @@ function App() {
       />
       <About />
       <Projects />
+      <Skills />
+      <ContactForm />
+      <FeedbackWall />
       <Footer />
     </div>
   );
