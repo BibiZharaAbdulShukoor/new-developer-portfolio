@@ -48,9 +48,8 @@ function ContactForm() {
 
     if (!form.email.trim()) {
       newErrors.email = "Email is required";
-    }
-    {
-      newErrors.email = "Invalid email";
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = "Invalid email format";
     }
 
     if (!form.message.trim()) newErrors.message = "Message is required";

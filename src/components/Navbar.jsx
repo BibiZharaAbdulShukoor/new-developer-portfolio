@@ -1,25 +1,18 @@
+import { NavLink } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2 className="logo">MyPortfolio</h2>
+      <h2>Portfolio</h2>
 
-      <ul className="nav-links">
-        <li>
-          <a href="#home">Home</a>
-        </li>
-
-        <li>
-          <a href="#about">About</a>
-        </li>
-
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+      <div className="nav-links">
+        <NavLink to="/" end>
+          Home
+        </NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/projects">Projects</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
+      </div>
     </nav>
   );
 }
