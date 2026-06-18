@@ -6,10 +6,12 @@ function About() {
   const hobbies = [
     "Coding",
     "Reading",
-    "Writting Poems",
+    "Writing Poems",
     "Traveling",
     "Cooking",
   ];
+
+  const technologies = ["HTML", "CSS", "JavaScript", "React", "Git", "GitHub"];
 
   return (
     <section className="about" id="about">
@@ -17,34 +19,53 @@ function About() {
 
       <div className="about-container">
         <div className="about-text">
-          <h3>Who I am</h3>
+          <h3>Who I Am</h3>
 
           <p>
-            I’m a self-taught developer who began coding 4 years ago out of
-            curiosity about how things work. Since then, I’ve grown into a
-            full-stack developer, working with startups and established
-            companies to build scalable web applications. I enjoy the
-            intersection of design and functionality and continuously explore
-            new technologies to stay ahead of the curve.
+            Hello! I'm Bibi Hawa Abdul Shukoor, an aspiring Frontend React
+            Developer who enjoys creating responsive, accessible and modern web
+            applications.
           </p>
+
+          <h3>My Learning Journey</h3>
+
           <p>
-            Since then, I’ve grown into a full-stack developer, working with
-            startups and established companies.
+            My journey started with HTML, CSS and JavaScript. As my interest
+            grew, I learned React and began building interactive projects that
+            improved both my technical and problem-solving skills.
           </p>
-          <h3>My Goals</h3>
+
+          <h3>Career Goals</h3>
+
           <p>
-            My primary goal is to build software that makes a positive impact on
-            people’s lives. I aim to continue growing as a developer, mentoring
-            others, and contributing to open-source projects. I’m especially
-            interested in creating tools that improve developer productivity and
-            building accessible web experiences for everyone.
+            My goal is to become a professional Frontend Engineer and contribute
+            to meaningful projects that create positive user experiences.
+          </p>
+
+          <h3>Work Philosophy</h3>
+
+          <p>
+            I believe in writing clean, reusable and user-friendly code while
+            continuously learning new technologies.
           </p>
 
           {showMore && (
-            <p>
-              I aim to continue growing as a developer, mentoring others, and
-              contributing to open-source projects.
-            </p>
+            <>
+              <h3>My Strengths</h3>
+
+              <p>
+                I am a quick learner, detail-oriented, creative and enjoy
+                collaborating with others to solve problems.
+              </p>
+
+              <h3>Technologies I Use</h3>
+
+              <ul>
+                {technologies.map((tech, index) => (
+                  <li key={index}>{tech}</li>
+                ))}
+              </ul>
+            </>
           )}
 
           <button onClick={() => setShowMore(!showMore)}>
@@ -53,7 +74,7 @@ function About() {
         </div>
 
         <div className="about-hobbies">
-          <h3>Hobbies</h3>
+          <h3>My Interests & Hobbies</h3>
 
           <ul>
             {hobbies.map((hobby, index) => (

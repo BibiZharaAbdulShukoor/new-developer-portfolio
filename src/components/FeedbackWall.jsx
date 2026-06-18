@@ -1,21 +1,25 @@
 import { useState } from "react";
+import FeedbackCard from "./FeedbackCard";
 
 function FeedbackWall() {
   const [feedbacks] = useState([
     {
+      id: 1,
       name: "Mustafa",
       rating: 5,
       comment: "Amazing Portfolio!",
     },
     {
+      id: 2,
       name: "Sahar",
       rating: 4,
       comment: "Very interesting design.",
     },
     {
+      id: 3,
       name: "Hawa",
       rating: 5,
-      comment: "wonderful!",
+      comment: "Wonderful!",
     },
   ]);
 
@@ -23,20 +27,8 @@ function FeedbackWall() {
     <section className="feedback">
       <h2>Feedback Wall</h2>
 
-      {feedbacks.map((item, index) => (
-        <div key={index} className="feedback-card">
-          <h3>
-            {item.name}
-
-            {item.rating === 5 && (
-              <span className="featured-review">🌟 Featured</span>
-            )}
-          </h3>
-
-          <p>{"⭐".repeat(item.rating)}</p>
-
-          <p>{item.comment}</p>
-        </div>
+      {feedbacks.map((feedback) => (
+        <FeedbackCard key={feedback.id} feedback={feedback} />
       ))}
     </section>
   );

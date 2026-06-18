@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const quotes = [
   "Every expert was once a beginner.",
   "Code. Create. Inspire.",
@@ -14,6 +16,16 @@ function Header({ name, message }) {
       <p>{message}</p>
 
       <blockquote>"{randomQuote}"</blockquote>
+
+      <div className="hero-buttons">
+        <Link to="/projects" className="hero-btn">
+          View My Projects
+        </Link>
+
+        <Link to="/contact" className="hero-btn">
+          Let's Connect
+        </Link>
+      </div>
     </header>
   );
 }
